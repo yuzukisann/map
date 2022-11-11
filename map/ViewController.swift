@@ -10,14 +10,22 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ViewController: UIViewController {
+import FloatingPanel
+
+class ViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelegate,
+                      FloatingPanelControllerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     var locationManager: CLLocationManager!
+    //　モーダルを初期化
+    let half = FloatingPanelController()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        mapView.delegate = self
         
         let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
         
@@ -25,7 +33,12 @@ class ViewController: UIViewController {
         
         let region = MKCoordinateRegion(center: akouStation, span: span)
         mapView.region = region
+        half.delegate = self
         
+        half.surfaceView.appearance.cornerRadius = 24.0
+        // 　セミモーダルビューを表示する
+        half.addPanel(toParent: self)
+        half.move(to: .tip, animated: false, completion: nil)
         setUpPin()
     }
     func setUpPin(){
@@ -102,11 +115,49 @@ class ViewController: UIViewController {
                 // mapにピンを表示する
                 mapView.addAnnotation(pin8)
         
+        let coordinate9 = CLLocationCoordinate2DMake(34.730808, 134.402144)
+        let pin9 = MKPointAnnotation()
+                pin9.title = "赤穂わくわくランド"
+                pin9.subtitle = "赤穂わくわくランド"
+                // ピンに一番上で作った位置情報をセット
+                pin9.coordinate = coordinate9
+                // mapにピンを表示する
+                mapView.addAnnotation(pin9)
+        
         
         
         
         
     }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        //タップされたピンの位置情報
+        print(view.annotation?.coordinate)
+        //タップされたピンのタイトルとサブタイトル
+        print(view.annotation?.title)
+        print(view.annotation?.subtitle)
+        showSemiModel()
+        
+    }
+    
+    func showSemiModel(){
+        
+
+        //　IDwo指定してViewControllerを取得する
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController else {
+            return
+        }
+        
+
+        
+        //　モーダルにViewControllerを設定する
+        half.set(contentViewController: vc)
+        
+
+        half.move(to: .half, animated: true, completion: nil)
+        
+    }
+    
 
 
 }

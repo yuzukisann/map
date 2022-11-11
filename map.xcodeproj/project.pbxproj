@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		218D61D8291E5127000BD983 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 218D61D7291E5127000BD983 /* FloatingPanel */; };
+		218D61DC291E539D000BD983 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218D61DB291E539D000BD983 /* DetailViewController.swift */; };
 		21994034290BEAFD005F4D6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21994033290BEAFD005F4D6D /* AppDelegate.swift */; };
 		21994036290BEAFD005F4D6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21994035290BEAFD005F4D6D /* SceneDelegate.swift */; };
 		21994038290BEAFD005F4D6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21994037290BEAFD005F4D6D /* ViewController.swift */; };
@@ -16,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		218D61DB291E539D000BD983 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		21994030290BEAFD005F4D6D /* map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = map.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21994033290BEAFD005F4D6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21994035290BEAFD005F4D6D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				218D61D8291E5127000BD983 /* FloatingPanel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +63,7 @@
 				21994033290BEAFD005F4D6D /* AppDelegate.swift */,
 				21994035290BEAFD005F4D6D /* SceneDelegate.swift */,
 				21994037290BEAFD005F4D6D /* ViewController.swift */,
+				218D61DB291E539D000BD983 /* DetailViewController.swift */,
 				21994039290BEAFD005F4D6D /* Main.storyboard */,
 				2199403C290BEAFF005F4D6D /* Assets.xcassets */,
 				2199403E290BEAFF005F4D6D /* LaunchScreen.storyboard */,
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = map;
+			packageProductDependencies = (
+				218D61D7291E5127000BD983 /* FloatingPanel */,
+			);
 			productName = map;
 			productReference = 21994030290BEAFD005F4D6D /* map.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +118,9 @@
 				Base,
 			);
 			mainGroup = 21994027290BEAFD005F4D6D;
+			packageReferences = (
+				218D61D6291E5127000BD983 /* XCRemoteSwiftPackageReference "FloatingPanel" */,
+			);
 			productRefGroup = 21994031290BEAFD005F4D6D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +151,7 @@
 				21994038290BEAFD005F4D6D /* ViewController.swift in Sources */,
 				21994034290BEAFD005F4D6D /* AppDelegate.swift in Sources */,
 				21994036290BEAFD005F4D6D /* SceneDelegate.swift in Sources */,
+				218D61DC291E539D000BD983 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +351,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		218D61D6291E5127000BD983 /* XCRemoteSwiftPackageReference "FloatingPanel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SCENEE/FloatingPanel";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		218D61D7291E5127000BD983 /* FloatingPanel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 218D61D6291E5127000BD983 /* XCRemoteSwiftPackageReference "FloatingPanel" */;
+			productName = FloatingPanel;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 21994028290BEAFD005F4D6D /* Project object */;
 }
