@@ -16,7 +16,6 @@ class DetailViewController: UIViewController {
     @IBOutlet var mametisiki: UILabel!
     
     @IBOutlet var syasin: UIView!
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
