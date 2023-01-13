@@ -9,8 +9,9 @@ import UIKit
 
 import MapKit
 import CoreLocation
-
 import FloatingPanel
+
+var placeNum:Int = 0
 
 class ViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelegate,
                       FloatingPanelControllerDelegate {
@@ -131,6 +132,39 @@ class ViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelega
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        
+        switch view.annotation?.title {
+            
+        case "播州赤穂JR":
+            placeNum = 1
+         
+        case "大石内蔵助像":
+            placeNum = 2
+            
+        case "赤穂城跡":
+            placeNum = 3
+        
+        case "赤穂市歴史博物館":
+            placeNum = 4
+            
+        case "あこうぱん":
+            placeNum = 5
+            
+        case "海浜公園":
+            placeNum = 6
+            
+        case "赤穂市民病院":
+            placeNum = 7
+            
+        case "赤穂市立民族資料館":
+            placeNum = 8
+            
+        case "赤穂わくわくランド":
+            placeNum = 9
+        default:
+            print("zennbuhazure")
+ 
+        }
         //タップされたピンの位置情報
         print(view.annotation?.coordinate)
         //タップされたピンのタイトルとサブタイトル

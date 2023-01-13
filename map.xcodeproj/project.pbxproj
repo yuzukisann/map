@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		211F4E462971617E00625C9B /* infoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211F4E452971617E00625C9B /* infoViewController.swift */; };
 		218D61D8291E5127000BD983 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 218D61D7291E5127000BD983 /* FloatingPanel */; };
 		218D61DC291E539D000BD983 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218D61DB291E539D000BD983 /* DetailViewController.swift */; };
 		21994034290BEAFD005F4D6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21994033290BEAFD005F4D6D /* AppDelegate.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		211F4E452971617E00625C9B /* infoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoViewController.swift; sourceTree = "<group>"; };
 		218D61DB291E539D000BD983 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		21994030290BEAFD005F4D6D /* map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = map.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21994033290BEAFD005F4D6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 		21994032290BEAFD005F4D6D /* map */ = {
 			isa = PBXGroup;
 			children = (
+				211F4E452971617E00625C9B /* infoViewController.swift */,
 				21994033290BEAFD005F4D6D /* AppDelegate.swift */,
 				21994035290BEAFD005F4D6D /* SceneDelegate.swift */,
 				21994037290BEAFD005F4D6D /* ViewController.swift */,
@@ -150,6 +153,7 @@
 			files = (
 				21994038290BEAFD005F4D6D /* ViewController.swift in Sources */,
 				21994034290BEAFD005F4D6D /* AppDelegate.swift in Sources */,
+				211F4E462971617E00625C9B /* infoViewController.swift in Sources */,
 				21994036290BEAFD005F4D6D /* SceneDelegate.swift in Sources */,
 				218D61DC291E539D000BD983 /* DetailViewController.swift in Sources */,
 			);
