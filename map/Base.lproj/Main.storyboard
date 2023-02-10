@@ -47,7 +47,7 @@
                                 <color key="backgroundColor" red="0.93394398690000002" green="0.75236839060000005" blue="0.68486219640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="場所" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPt-nz-Yn5">
-                                <rect key="frame" x="90" y="48" width="234" height="69"/>
+                                <rect key="frame" x="44" y="48" width="327" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="38"/>
@@ -62,11 +62,17 @@
                                 <rect key="frame" x="96" y="340" width="222" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="詳細を見る">
+                                <buttonConfiguration key="configuration" style="plain">
                                     <backgroundConfiguration key="background">
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="34"/>
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="詳細を見る">
+                                            <attributes>
+                                                <font key="NSFont" size="34" name="HelveticaNeue-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                     <color key="baseForegroundColor" white="1" alpha="0.89865385139999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -79,6 +85,7 @@
                     </view>
                     <connections>
                         <outlet property="basyo" destination="WPt-nz-Yn5" id="YVq-ZX-gWd"/>
+                        <outlet property="gazou" destination="UcM-Nb-W16" id="NUB-lB-1Qv"/>
                         <outlet property="nextButton" destination="eEM-JF-f7o" id="zGu-wb-KOw"/>
                     </connections>
                 </viewController>
@@ -156,9 +163,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="4y0-3H-l4D"/>
                     <connections>
-                        <outlet property="akusedutextview" destination="FCb-rZ-OkG" id="btZ-9p-46l"/>
-                        <outlet property="basyoTextView" destination="iGy-HV-aLQ" id="gT2-GT-Daj"/>
-                        <outlet property="zyuusyotextview" destination="EMF-gN-Na5" id="9BI-Fg-Nlx"/>
+                        <outlet property="akusedutextview" destination="FCb-rZ-OkG" id="SbZ-td-VQX"/>
+                        <outlet property="basyotextview" destination="iGy-HV-aLQ" id="FM6-Zv-R6m"/>
+                        <outlet property="zyuusyotextview" destination="EMF-gN-Na5" id="i8l-tV-ymH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XvL-5b-4OW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

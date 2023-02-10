@@ -125,6 +125,14 @@ class ViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelega
                 // mapにピンを表示する
                 mapView.addAnnotation(pin9)
         
+        let coordinate10 = CLLocationCoordinate2DMake( 34.753599837202664, 134.3899196251632)
+        let pin10 = MKPointAnnotation()
+                pin10.title = "大石神社"
+                pin10.subtitle = "大石神社"
+                // ピンに一番上で作った位置情報をセット
+                pin10.coordinate = coordinate10
+                // mapにピンを表示する
+                mapView.addAnnotation(pin10)
         
         
         
