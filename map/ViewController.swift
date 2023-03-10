@@ -45,7 +45,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelega
     func setUpPin(){
        // 播州赤穂JR
         let coordinate1 = CLLocationCoordinate2DMake( 34.756600, 134.393266)
-        let pin1 = MKPointAnnotation()
+         let pin1 = MKPointAnnotation()
                 pin1.title = "播州赤穂JR"
                 pin1.subtitle = "播州赤穂JR"
                 // ピンに一番上で作った位置情報をセット
