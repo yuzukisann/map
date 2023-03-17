@@ -19,6 +19,10 @@ class infoViewController: UIViewController {
     //zyuusyotextview.text = adressList[placeNum - 1]
     @IBOutlet weak var basyotextview: UITextView!
     
+    @IBAction func dismissAction(_ sender: Any) {
+        self.dismiss(animated: true, completion:  nil)
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
